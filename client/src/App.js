@@ -37,7 +37,7 @@ class App extends Component {
         <Navbar />
         <Container>
           {this.state.data.map(f => (
-            <PlayerCard name={f.name} country={f.country} searches={f.searches} />
+            <PlayerCard className="card" name={f.name} country={f.country} searches={f.searches} />
           ))}
         </Container>
       </div>

@@ -1,21 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
 import App from './App';
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+import Navbar from "./components/navbar";
 
 test('displays Dark Mode button', () => {
-  const { getByText } = render(<Dashboard />);
+  const { getByText } = render(<Navbar />);
   getByText('Dark');
 })
 
 test('displays H1 on navbar', () => {
-  const { getByText } = render(<Dashboard />);
+  const { getByText } = render(<Navbar />);
   getByText('Womens World Cup');
 })
+
+// test('displays cards', () => {
+//   const { getByText } = render(<App />);
+//   getAllByText('Country');
+// })
 
