@@ -19,9 +19,3 @@ test('displays H1 on navbar', () => {
   getByText('Womens World Cup');
 })
 
-
-test('displays Dark Mode button', () => {
-  const { getByText } = render(<Dashboard />);
-  getByText('Dark');
-})
-

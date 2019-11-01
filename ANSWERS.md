@@ -4,11 +4,11 @@ I wouldn't choose class components over functional components, but I might have 
 
 - [ ] Name three lifecycle methods and their purposes.
 
-componentDidMount:
+componentDidMount: The initial load of the component. Render is invoked
 
-componentDidUpdate:
+componentDidUpdate: rerenders based on state changes
 
-componentDidUnmount
+componentDidUnmount: component is removed
 
 - [ ] What is the purpose of a custom hook?
 
