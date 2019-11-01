@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import PropTypes from 'prop-types';
+import { PlayerCard } from "./components/playerCard";
 
 class App extends Component {
   state = {
@@ -31,7 +31,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Working!</h1>
+        {this.state.data.map(f => (
+          <PlayerCard name={f.name} country={f.country} searches={f.searches} />
+        ))}
       </div>
     );
   }
