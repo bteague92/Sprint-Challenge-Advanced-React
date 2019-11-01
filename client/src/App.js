@@ -1,6 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import axios from "axios";
+import styled from "styled-components";
 import { PlayerCard } from "./components/playerCard";
+import Navbar from "./components/navbar";
+import "./App.css";
+
+
+const Container = styled.div`
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+`;
 
 class App extends Component {
   state = {
@@ -20,20 +30,16 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  componentDidUpdate(prevProps, prevState) {
-
-  }
-
-  componentWillUnmount() {
-
-  }
 
   render() {
     return (
       <div>
-        {this.state.data.map(f => (
-          <PlayerCard name={f.name} country={f.country} searches={f.searches} />
-        ))}
+        <Navbar />
+        <Container>
+          {this.state.data.map(f => (
+            <PlayerCard name={f.name} country={f.country} searches={f.searches} />
+          ))}
+        </Container>
       </div>
     );
   }
