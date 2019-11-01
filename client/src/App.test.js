@@ -18,6 +18,8 @@ test('displays H2 on navbar', () => {
   getByText('Players:');
 })
 
+
+
 // test('displays cards', () => {
 //   const { getByText } = render(<App />);
 //   getAllByText('Country');

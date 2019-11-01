@@ -14,7 +14,8 @@ margin: 5px;
 
 export const PlayerCard = (props) => {
 
-    const [addVote, vote] = useAddVote();
+    const [addVote, vote, addFVote, fVote, addMVote, mVote] = useAddVote();
+
 
 
     return (
@@ -22,8 +23,11 @@ export const PlayerCard = (props) => {
             <h2>{props.name}</h2>
             <h3>Country: {props.country}</h3>
             <h3>Searches: {props.searches}</h3>
-            <h3>Votes: {vote}</h3>
-            <button onClick={addVote}>Add Search</button>
+            <h3>Total Votes: {fVote + mVote}</h3>
+            <h3>Female Votes: {fVote}</h3>
+            <button onClick={addFVote}>Add Vote</button>
+            <h3>Female Votes: {mVote}</h3>
+            <button onClick={addMVote}>Add Vote</button>
         </Card>
     )
 }
