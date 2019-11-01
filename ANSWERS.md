@@ -1,6 +1,6 @@
 - [ ] Why would you use class component over function components (removing hooks from the question)?
 
-I wouldn't choose class components over functional components, but I might have to refactor someones legacy code from class to functional so it is good to know class components.
+Because functional components can't use state without hooks.
 
 - [ ] Name three lifecycle methods and their purposes.
 
