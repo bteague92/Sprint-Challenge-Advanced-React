@@ -26,7 +26,7 @@ export const PlayerCard = (props) => {
             <h3>Total Votes: {fVote + mVote}</h3>
             <h3>Female Votes: {fVote}</h3>
             <button onClick={addFVote}>Add Vote</button>
-            <h3>Female Votes: {mVote}</h3>
+            <h3>Male Votes: {mVote}</h3>
             <button onClick={addMVote}>Add Vote</button>
         </Card>
     )

@@ -5,7 +5,7 @@ import Navbar from "./components/navbar";
 
 test('displays Dark Mode button', () => {
   const { getByText } = render(<Navbar />);
-  getByText('Dark');
+  getByText('Dark Mode');
 })
 
 test('displays H1 on navbar', () => {

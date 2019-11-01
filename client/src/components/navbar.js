@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav className="navbar">
             <h1>Womens World Cup</h1>
             <div>
-                <button onClick={setDarkMode}>Dark</button>
+                <button onClick={setDarkMode}>Dark Mode</button>
             </div>
             <h2>Players: </h2>
         </nav>
