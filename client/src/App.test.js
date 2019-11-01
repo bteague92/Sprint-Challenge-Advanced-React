@@ -13,8 +13,12 @@ test('displays H1 on navbar', () => {
   getByText('Womens World Cup');
 })
 
+test('displays H2 on navbar', () => {
+  const { getByText } = render(<Navbar />);
+  getByText('Players:');
+})
+
 // test('displays cards', () => {
 //   const { getByText } = render(<App />);
 //   getAllByText('Country');
 // })
-

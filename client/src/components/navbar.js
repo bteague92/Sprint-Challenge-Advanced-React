@@ -11,6 +11,7 @@ const Navbar = () => {
             <div>
                 <button onClick={setDarkMode}>Dark</button>
             </div>
+            <h2>Players: </h2>
         </nav>
     );
 };

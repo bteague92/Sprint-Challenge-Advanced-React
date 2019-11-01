@@ -15,6 +15,7 @@ flex-wrap: wrap;
 class App extends Component {
   state = {
     data: [],
+    searches: ''
   };
 
   componentDidMount() {
