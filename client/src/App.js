@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, useEffect } from 'react';
+import axios from "axios";
+import styled from "styled-components";
+import { PlayerCard } from "./components/playerCard";
+import Navbar from "./components/navbar";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const Container = styled.div`
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+`;
+
+class App extends Component {
+  state = {
+    data: [],
+    searches: ''
+  };
+
+  componentDidMount() {
+    axios
+      .get(`http://localhost:5000/api/players`)
+      .then(res => {
+        console.log("this is res", res);
+        this.setState({
+          data: res.data
+        })
+        console.log(this.state.data)
+      })
+      .catch(err => console.log(err));
+  }
+
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <Container>
+          {this.state.data.map(f => (
+            <PlayerCard className="card" name={f.name} country={f.country} searches={f.searches} />
+          ))}
+        </Container>
+      </div>
+    );
+  }
 }
 
 export default App;
